@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+spring:
+  redis:
+    host: localhost
+    port: 6379
+  profiles:
+    active: local
+
+users: 10000
+journeys: 100
