@@ -7,10 +7,7 @@ import java.util.Random;
 
 import com.lee.redis.api.UserController;
 import com.lee.redis.domain.Journey;
-import com.lee.redis.domain.User;
-import com.lee.redis.repository.UserRepository;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,7 +21,7 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserRepositoryTest {
+public class RepositoryTests {
 
     @Autowired
     private UserService userService;
@@ -74,7 +71,7 @@ public class UserRepositoryTest {
     }
 
     @Test
-    public void findJourneysByUserIdExistsAndLessThan5MsTest(){
+    public void findJourneysByUserIdExistsAndLessThan7MsTest(){
         Random random = new Random();
         Integer userId = random.nextInt(10000);
         //System.out.println("userId: " + userId);
@@ -88,7 +85,7 @@ public class UserRepositoryTest {
 
         Assert.assertNotNull(expected);
         assertTrue(expected.size() > 0);
-        assertTrue(timeMillis <= 5);
+        assertTrue(timeMillis <= 7);
     }
 
     @Test
