@@ -21,15 +21,10 @@ public class User implements Serializable {
 
     @Id
     private Long id;
-
     private String fitsName;
-
     private String lastName;
-
     private String age;
-
     @Indexed
     @Reference
     private List<Journey> journeys;
-
 }

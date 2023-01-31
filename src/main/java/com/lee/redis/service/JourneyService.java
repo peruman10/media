@@ -15,6 +15,4 @@ public class JourneyService {
     public Journey findByJourneyId(String id, Long userId) {
         return journeyRepository.findByJourneyId(id, userId);
     }
-
-
 }

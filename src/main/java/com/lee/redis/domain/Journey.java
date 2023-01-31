@@ -19,13 +19,9 @@ import lombok.NoArgsConstructor;
 public class Journey implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
     @Indexed
     @Id
     private String journeyId;
-
     private String city;
-
     private String country;
-
 }
